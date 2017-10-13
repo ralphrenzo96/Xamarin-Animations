@@ -39,10 +39,10 @@ namespace XamarinAnimation.Views
                         await imageDisplay.RelRotateTo(360, 2000);
 					break;
 				case 3:
-					await imageDisplay.ScaleTo(1, 2000);
+					await imageDisplay.ScaleTo(0.5, 2000);
 					break;
 				case 4:
-					await imageDisplay.RelScaleTo(1, 2000);
+					await imageDisplay.RelScaleTo(0.5, 2000);
 					break;
             }
         }
