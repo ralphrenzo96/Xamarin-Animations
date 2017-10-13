@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using XamarinAnimation.Views;
 
 namespace XamarinAnimation
 {
@@ -8,7 +9,7 @@ namespace XamarinAnimation
         {
             InitializeComponent();
 
-            MainPage = new XamarinAnimationPage();
+            MainPage = new AnimationPage();
         }
 
         protected override void OnStart()
