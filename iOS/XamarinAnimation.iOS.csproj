@@ -103,9 +103,20 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\anim_01.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\anim_01.imageset\001.1.png" />
+    <ImageAsset Include="Assets.xcassets\anim_01.imageset\001.2.png" />
+    <ImageAsset Include="Assets.xcassets\anim_01.imageset\001.3.png" />
+    <ImageAsset Include="Assets.xcassets\anim_02.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\anim_02.imageset\002.1.png" />
+    <ImageAsset Include="Assets.xcassets\anim_02.imageset\002.2.png" />
+    <ImageAsset Include="Assets.xcassets\anim_02.imageset\002.3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\anim_01.imageset\" />
+    <Folder Include="Assets.xcassets\anim_02.imageset\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -118,6 +129,10 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controls\CustomListViewRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
