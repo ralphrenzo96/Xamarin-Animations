@@ -113,6 +113,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\anim_01.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\anim_01.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\anim_01.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\anim_02.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\anim_02.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\anim_02.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
