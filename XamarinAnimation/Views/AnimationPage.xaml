@@ -16,7 +16,7 @@
         </ResourceDictionary>
     </Application.Resources>
 
-    <StackLayout Spacing = "0" VerticalOptions = "FillAndExpand">
+    <StackLayout Spacing = "0" VerticalOptions = "FillAndExpand" x:Name = "stackParent">
         <Grid VerticalOptions = "FillAndExpand" ColumnSpacing = "0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
@@ -29,7 +29,7 @@
                         <controls:CustomViewCell>
                             <StackLayout Padding = "0,10">
                                 <Image Source = "{Binding Image}" Opacity = "0.4" HeightRequest = "23"/>
-                                <Label Text = "{Binding Name}" FontSize = "10" TextColor = "Silver" HorizontalTextAlignment = "Center"/>
+                                <Label Text = "{Binding Index, StringFormat ='Sample {0}'}" FontSize = "10" TextColor = "Silver" HorizontalTextAlignment = "Center"/>
                             </StackLayout>
                         </controls:CustomViewCell>
                     </DataTemplate>
@@ -37,9 +37,10 @@
             </controls:CustomListView>
 
             <StackLayout Spacing = "0" Grid.Column = "1">
-                <Image Source = "img.png" x:Name = "imageDisplay" VerticalOptions = "FillAndExpand" Margin = "40,30" Opacity = "0.8"/>
-                <ScrollView HeightRequest = "200">
-                    <Label TextColor = "Silver" FontSize = "12" IsEnabled = "false" x:Name = "labelDetails" Margin = "10" VerticalTextAlignment = "Start"/>
+                <Image Source = "img.png" x:Name = "imageDisplay" VerticalOptions = "FillAndExpand" Margin = "40,30"/>
+                <Label Text = "Xamarin Animations" x:Name = "labelName" FontSize = "14" IsEnabled = "false" Margin = "10,10,10,0" HorizontalTextAlignment = "Start" FontAttributes = "Bold" TextColor = "Gray"/>
+                <ScrollView HeightRequest = "200" Margin = "10,0,10,10">
+                    <Label TextColor = "Silver" FontSize = "12" IsEnabled = "false" x:Name = "labelDetails" VerticalTextAlignment = "Start"/>
                 </ScrollView>
             </StackLayout>
 <!--            <controls:CustomButton Text = "Rotation" CommandParameter = "1" Clicked = "Animate_Clicked" Grid.Column = "0" Style = "{StaticResource ButtonAnimate}"/>
