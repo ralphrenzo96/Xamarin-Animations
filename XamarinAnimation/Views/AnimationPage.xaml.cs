@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinAnimation.Models;
 
@@ -26,6 +27,8 @@ namespace XamarinAnimation.Views
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Fading", Index = 7, Details = "This code animates the Image instance by fading it in over 4 seconds (4000 milliseconds). The FadeTo method obtains the current Opacity property value for the start of the animation, and then fades in from that value to its first argument (1)." });
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Compound Animations", Index = 8, Details = "In this example, the Image is translated over 6 seconds (6000 milliseconds). The translation of the Image uses five animations, with the await operator indicating that each animation executes sequentially. Therefore, subsequent animation methods execute after the previous method has completed." });
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Composite Animations", Index = 9, Details = "In this example, the Image is scaled and simultaneously rotated over 4 seconds (4000 milliseconds). The scaling of the Image uses two sequential animations that occur at the same time as the rotation. The RotateTo method executes without an await operator and returns immediately, with the first ScaleTo animation then beginning. The await operator on the first ScaleTo method call delays the second ScaleTo method call until the first ScaleTo method call has completed. At this point the RotateTo animation is half way completed and the Image will be rotated 180 degrees. During the final 2 seconds (2000 milliseconds), the second ScaleTo animation and the RotateTo animation both complete." });
+            animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Running Multiple Asynchronous Methods Concurrently", Index = 10, Details = "The static Task.WhenAny and Task.WhenAll methods are used to run multiple asynchronous methods concurrently, and therefore can be used to create composite animations. Both methods return a Task object and accept a collection of methods that each return a Task object. The Task.WhenAny method completes when any method in its collection completes execution" });
+            animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Running Multiple Asynchronous Methods Concurrently", Index = 11, Details = "In this example, the Task.WhenAny method call contains two tasks. The first task rotates the image over 4 seconds (4000 milliseconds), and the second task scales the image over 2 seconds (2000 milliseconds). When the second task completes, the Task.WhenAny method call completes. However, even though the RotateTo method is still running, the second ScaleTo method can begin." });
             //animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "", Index = 3, Details = ""});
 
 			labelDetails.Text = "The animation extension methods in the ViewExtensions class are all asynchronous and return a Task<bool> object. The return value is false if the animation completes, and true if the animation is cancelled. Therefore, the animation methods should typically be used with the await operator, which makes it possible to easily determine when an animation has completed. In addition, it then becomes possible to create sequential animations with subsequent animation methods executing after the previous method has completed. For more information, see Compound Animations.\n\nIf there's a requirement to let an animation complete in the background, then the await operator can be omitted. In this scenario, the animation extension methods will quickly return after initiating the animation, with the animation occurring in the background. This operation can be taken advantage of when creating composite animations";
@@ -72,6 +75,23 @@ namespace XamarinAnimation.Views
 					await imageDisplay.RotateTo(360, 4000);
 					await imageDisplay.ScaleTo(1.5, 2000);
 					await imageDisplay.ScaleTo(1, 2000);
+					break;
+				case 10:
+					await Task.WhenAny<bool>
+                    (
+                      imageDisplay.RotateTo(360, 4000),
+                      imageDisplay.ScaleTo(1.5, 2000)
+                    );
+					await imageDisplay.ScaleTo(1, 2000);
+					break;
+				case 11:
+					uint duration = 10 * 60 * 1000;
+
+					await Task.WhenAll(
+					  imageDisplay.RotateTo(307 * 360, duration),
+					  imageDisplay.RotateXTo(251 * 360, duration),
+					  imageDisplay.RotateYTo(199 * 360, duration)
+					);
 					break;
             }
         }
