@@ -1,19 +1,8 @@
-﻿<Properties StartupConfiguration="{B9EE6791-F36D-4E50-AA69-7D6E99EF4489}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controls/CustomListViewRenderer.cs">
+﻿<Properties StartupConfiguration="{C689D150-F0E9-4AB1-A9EF-0F3226FF53DB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinAnimation/Views/AnimationPage.xaml.cs">
     <Files>
-      <File FileName="XamarinAnimation/packages.config" Line="1" Column="1" />
-      <File FileName="XamarinAnimation/App.xaml.cs" Line="9" Column="10" />
       <File FileName="XamarinAnimation/Views/AnimationPage.xaml" Line="50" Column="1" />
-      <File FileName="XamarinAnimation/Views/AnimationPage.xaml.cs" Line="45" Column="39" />
-      <File FileName="XamarinAnimation/obj/Debug/XamarinAnimation.Views.AnimationPage.xaml.g.cs" Line="23" Column="1" />
-      <File FileName="XamarinAnimation/Controls/CustomButton.cs" Line="5" Column="27" />
-      <File FileName="Droid/Controls/CustomButtonRenderer.cs" Line="11" Column="2" />
-      <File FileName="XamarinAnimation/Controls/CustomViewCell.cs" Line="8" Column="1" />
-      <File FileName="Droid/Resources/values/styles.xml" Line="27" Column="81" />
-      <File FileName="XamarinAnimation/Models/AnimationTypeModel.cs" Line="8" Column="24" />
-      <File FileName="XamarinAnimation/Controls/CustomListView.cs" Line="8" Column="1" />
-      <File FileName="Droid/Controls/CustomListViewRenderer.cs" Line="15" Column="54" />
-      <File FileName="iOS/Controls/CustomListViewRenderer.cs" Line="11" Column="6" />
+      <File FileName="XamarinAnimation/Views/AnimationPage.xaml.cs" Line="27" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -21,9 +10,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.XamarinAnimation.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3EAE4AE4-4B00-4D29-9403-F146254DADCA">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.XamarinAnimation.iOS>
+  <MonoDevelop.Ide.ItemProperties.XamarinAnimation.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.49A1FB21-4621-44E6-8961-A59DB7597723" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.XamarinAnimation.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
 </Properties>
