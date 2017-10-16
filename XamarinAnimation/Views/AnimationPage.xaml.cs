@@ -24,7 +24,7 @@ namespace XamarinAnimation.Views
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Scaling and Rotation with Anchors", Index = 5, Details = "The AnchorX and AnchorY properties set the center of scaling or rotation for the Rotation and Scale properties. Therefore, their values also affect the RotateTo and ScaleTo methods." });
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Translation", Index = 6, Details = "This code animates the Image instance by translating it horizontally and vertically over 1 second (1000 milliseconds). The TranslateTo method simultaneously translates the image 100 pixels to the left, and 100 pixels upwards. This is because the first and second arguments are both negative numbers. Providing positive numbers would translate the image to the right, and down." });
             animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Fading", Index = 7, Details = "This code animates the Image instance by fading it in over 4 seconds (4000 milliseconds). The FadeTo method obtains the current Opacity property value for the start of the animation, and then fades in from that value to its first argument (1)." });
-
+            animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "Compound Animations", Index = 8, Details = "In this example, the Image is translated over 6 seconds (6000 milliseconds). The translation of the Image uses five animations, with the await operator indicating that each animation executes sequentially. Therefore, subsequent animation methods execute after the previous method has completed." });
 
             //animationTypes.Add(new AnimationTypeModel { Image = "anim_01", Name = "", Index = 3, Details = ""});
 
@@ -60,6 +60,13 @@ namespace XamarinAnimation.Views
 				case 7:
 					imageDisplay.Opacity = 0;
 					await imageDisplay.FadeTo(1, 4000);
+					break;
+				case 8:
+					await imageDisplay.TranslateTo(-50, 0, 1000);    // Move image left
+					await imageDisplay.TranslateTo(-50, -50, 1000); // Move image up
+					await imageDisplay.TranslateTo(50, 50, 2000);   // Move image diagonally down and right
+					await imageDisplay.TranslateTo(0, 50, 1000);     // Move image left
+					await imageDisplay.TranslateTo(0, 0, 1000);       // Move image up
 					break;
             }
         }
