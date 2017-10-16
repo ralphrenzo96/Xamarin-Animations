@@ -34,7 +34,7 @@ namespace XamarinAnimation.Views
 			labelDetails.Text = "The animation extension methods in the ViewExtensions class are all asynchronous and return a Task<bool> object. The return value is false if the animation completes, and true if the animation is cancelled. Therefore, the animation methods should typically be used with the await operator, which makes it possible to easily determine when an animation has completed. In addition, it then becomes possible to create sequential animations with subsequent animation methods executing after the previous method has completed. For more information, see Compound Animations.\n\nIf there's a requirement to let an animation complete in the background, then the await operator can be omitted. In this scenario, the animation extension methods will quickly return after initiating the animation, with the animation occurring in the background. This operation can be taken advantage of when creating composite animations";
         }
 
-        public async void Animate_Clicked(AnimationTypeModel model)
+        public async Task Animate_Clicked(AnimationTypeModel model)
         {
             labelName.Text = model.Name;
             labelDetails.Text = model.Details;

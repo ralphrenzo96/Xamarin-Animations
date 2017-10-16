@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{C689D150-F0E9-4AB1-A9EF-0F3226FF53DB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinAnimation/Views/AnimationPage.xaml.cs">
+﻿<Properties StartupConfiguration="{B9EE6791-F36D-4E50-AA69-7D6E99EF4489}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="XamarinAnimation/Views/AnimationPage.xaml" Line="50" Column="1" />
-      <File FileName="XamarinAnimation/Views/AnimationPage.xaml.cs" Line="27" Column="10" />
+      <File FileName="XamarinAnimation/Views/AnimationPage.xaml" Line="30" Column="57" />
+      <File FileName="XamarinAnimation/Views/AnimationPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -10,7 +11,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.XamarinAnimation.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.49A1FB21-4621-44E6-8961-A59DB7597723" />
+  <MonoDevelop.Ide.ItemProperties.XamarinAnimation.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3EAE4AE4-4B00-4D29-9403-F146254DADCA" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.XamarinAnimation.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
 </Properties>
